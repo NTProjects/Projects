@@ -1,0 +1,140 @@
+
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <title>Coffee Counter</title>
+<style type="text/css">
+ body {background-color:purple;color:red;
+ font-family:helvetica;text-align:center}
+ hr {width:50%;color:black}
+ h1 {color:black}
+ section {margin-left : auto; margin-right : auto; text-align : center; 
+ background-color : #993300; border-style : solid;
+ border-color : firebrick; border-width : medium; padding : 8px;}
+ .drinkBtn {width: 90px;}
+ .otherBtn {width:110px;}
+ .total {border: solid black;}
+ .echo {border: solid gold;}
+</style>
+</head>
+ <body>
+<h1> Coffee Counter</h1>
+<hr/>
+<p><b>Energy now <br/>
+ or slouch later</b></p>
+<img src=" coffee.jpg"> 
+ <section style="display: table;">
+ 
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;"></div>
+ <div style="display: table-cell; padding: 3px;"></div>
+ <div style="display: table-cell; padding: 3px; border: solid gray;">
+ <form name="emp">
+ <select id="employee" >
+ <option value="-">-Login In-</option>
+ <option value="C"> mark </option>
+ <option value="J"> Jacob </option>
+ <option value="M"> Joey </option>
+ <option value="O"> Bob </option>
+ <option value="R"> Logan </option>
+ <option value="V"> Nicholas </option>
+ </select> Is Pulling For Us
+ </form>
+ </div>
+ <div style="display: table-cell; padding: 3px;"></div>
+ </div>
+ 
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;">
+ <input class="echo" type="text" form="esp" id="shotpic" value=" " size="1"/></div>
+ <div style="display: table-cell; padding: 3px;">
+ <input class="echo" type="text" form="esp" id="sizepic" value=" " size="1"/></div>
+ <div style="display: table-cell; padding: 3px;">
+ <input class="echo" type="text" form="esp" id="coffee" value=" " size="10"/></div>
+ <div style="display: table-cell; padding: 3px;"></div>
+ </div>
+ 
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='shots = 1; shotpic.value="1"' > 1 </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='ounce = 8; sizepic.value="S"'> S </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button class="drinkBtn" form="esp" onclick='drink = "espresso"; coffee.value="Espresso"'>
+ ESPRESSO </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button class="otherBtn" form="esp" onclick='
+ shots = 1;
+ drink = "none";
+ ounce = 0;
+ disp.value = "0.00";
+ shotpic.value= " "; sizepic.value=" "; coffee.value=" ";'> Clear </button></div>
+ </div>
+ 
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='shots = 2; shotpic.value="2"'> 2 </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='ounce = 12; sizepic.value="T"'> T </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button class="drinkBtn" form="esp" onclick='drink = "latte"; coffee.value="Latte"'>
+ LATTE </button></div>
+ <div style="display: table-cell; padding: 3px;"></div>
+ </div>
+ 
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;">
+ <button form='esp' onclick='shots = 3; shotpic.value = "3"'> 3 </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='ounce = 16; sizepic.value= "G"'> G </button></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button class="drinkBtn" form="esp" onclick='drink = "cappuccino"; coffee.value="Cappuccino"'> 
+ CAPPUCCINO </button></div>
+ 
+ 
+ <div style="display: table-cell; padding: 3px;"><button class="otherBtn" form="esp" 
+ onclick='
+ 
+ var price; 
+ var taxRate = 0.07; 
+ if (drink == "espresso") {
+ price = 1.50;
+ 
+ }
+ 
+ if (drink == "latte" || drink == "cappuccino") { 
+ if (ounce == 8) 
+ price = 2.25; 
+ if (ounce == 12) 
+ price = 2.50; 
+ if (ounce == 16) 
+ price = 2.75;
+ 
+ } 
+ 
+ price = price + (shots - 1) * .50;
+ price = price + price * taxRate; 
+ disp.value = (Math.round(100*price)/100).toFixed(2); 
+ '> Total </button></div>
+ </div>
+ <div style="display: table-row;">
+ <div style="display: table-cell; padding: 3px;">
+ <button form="esp" onclick='shots = 4; shotpic.value = "4"'> 4 </button></div>
+ <div style="display: table-cell; padding: 3px;"></div>
+ <div style="display: table-cell; padding: 3px;">
+ <button class="drinkBtn" form="esp" onclick='drink = "americano"; coffee.value="Americano"'> 
+ AMERICANO </button></div>
+ 
+ <div style="display: table-cell; padding: 3px;">
+ <form name="esp">
+ <input class="total" type="text" id="disp" value="0.00" size="5" />
+ </form></div>
+ </div>
+ 
+ </section>
+</body> 
+</html>
+<input type="button value="label" onclick="event_handler"/>
+ </body>
+</html>
